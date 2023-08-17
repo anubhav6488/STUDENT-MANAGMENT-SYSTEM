@@ -1,0 +1,10 @@
+﻿@model FirebaseData
+
+<h2>Send Data to Firestore</h2>
+
+@using (Html.BeginForm("SendData", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Field1, new { placeholder = "Enter Field 1" })
+    @Html.TextBoxFor(model => model.Field2, new { placeholder = "Enter Field 2" })
+    <input type="submit" value="Send Data" />
+}
